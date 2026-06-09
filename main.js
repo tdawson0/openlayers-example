@@ -12,7 +12,7 @@ const map = new Map({
     })
   ],
   view: new View({
-    center: fromLonLat([-0.1276, 51.5074]), // London, UK EPGS:4326
-    zoom: 13
+    center: fromLonLat([-73.9712, 40.7831]), // New York City coordinates
+    zoom: 12
   })
 });
