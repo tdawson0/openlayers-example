@@ -12,7 +12,7 @@ const map = new Map({
     })
   ],
   view: new View({
-    center: fromLonLat([24.945831, 60.167059]),
+    center: fromLonLat([24.945831, 60.167059]), // Helsinki, Finland
     zoom: 13
   })
 });

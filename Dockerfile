@@ -1,16 +1,16 @@
-FROM node:lts AS build
+FROM node:24.16 AS build
 
 WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm ci
 
 COPY . .
 
 RUN npm run build
 
-FROM node:alpine AS production
+FROM node:24.16-alpine AS production
 
 WORKDIR /app
 

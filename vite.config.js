@@ -1,5 +1,11 @@
 export default {
   build: {
-    sourcemap: true,
-  }
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'ol': ['ol']
+        }
+      }
+    }
+  },
 }
