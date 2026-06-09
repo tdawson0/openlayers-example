@@ -12,7 +12,7 @@ const map = new Map({
     })
   ],
   view: new View({
-    center: fromLonLat([24.945831, 60.167059]), // Helsinki, Finland
+    center: fromLonLat([-0.1276, 51.5074]), // London, UK EPGS:4326
     zoom: 13
   })
 });
