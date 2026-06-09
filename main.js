@@ -12,7 +12,7 @@ const map = new Map({
     })
   ],
   view: new View({
-    center: fromLonLat([-73.9712, 40.7831]), // New York City coordinates
-    zoom: 12
+    center: fromLonLat([24.945831, 60.167059]), // Helsinki, Finland
+    zoom: 13
   })
 });
