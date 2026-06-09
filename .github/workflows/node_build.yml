@@ -1,0 +1,37 @@
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v6
+
+    - name: Use Node.js
+      uses: actions/setup-node@v6
+      with:
+        node-version: 24
+        cache: 'npm'
+
+    - name: Install dependencies
+      run:
+        npm ci
+
+    - name: Build
+      run:
+        npm run build
+
+    - name: Start server
+      run:
+        npm run serve -- --port 3000
+    
+    - name: Test server
+      run: |
+        sleep 5 # Wait for the server to start
+        curl -f http://localhost:3000 || exit 1
